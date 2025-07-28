@@ -1,0 +1,18 @@
+{
+    "repository_version": 1.0,
+    "name": "Custom TorrentsCSV Repository",
+    "description": "Repository containing TorrentsCSV plugin for Unchained",
+    "author": "YourName",
+    "plugins": [
+        {
+            "id": "torrentscsv",
+            "versions": [
+                {
+                    "plugin": 1.0,
+                    "engine": 2.0,
+                    "link": "https://raw.githubusercontent.com/yourusername/yourrepo/main/torrentscsv.unchained"
+                }
+            ]
+        }
+    ]
+}

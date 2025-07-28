@@ -1,0 +1,56 @@
+{
+    "id": "torrentscsv",
+    "engine": 2.0,
+    "plugin": 1.0,
+    "name": "TorrentsCSV",
+    "description": "Search torrents using the torrents-csv.com collaborative repository",
+    "author": "YourName",
+    "base_url": "https://torrents-csv.com",
+    "search_url": "https://torrents-csv.com/service/search?q={query}&size=50",
+    "supports_magnet": true,
+    "supports_torrent": false,
+    "torrent_type": "direct_links",
+    "search_fields": {
+        "link": {
+            "regex_use": "first",
+            "regexps": [
+                {
+                    "regex": "\"infohash\":\"([^\"]+)\"",
+                    "group": 1,
+                    "slug_type": "prefix",
+                    "other": "magnet:?xt=urn:btih:"
+                }
+            ]
+        },
+        "name": {
+            "regex_use": "first", 
+            "regexps": [
+                {
+                    "regex": "\"name\":\"([^\"]+)\"",
+                    "group": 1,
+                    "slug_type": "complete"
+                }
+            ]
+        },
+        "size": {
+            "regex_use": "first",
+            "regexps": [
+                {
+                    "regex": "\"size_bytes\":([0-9]+)",
+                    "group": 1,
+                    "slug_type": "complete"
+                }
+            ]
+        },
+        "seeders": {
+            "regex_use": "first",
+            "regexps": [
+                {
+                    "regex": "\"seeders\":([0-9]+)",
+                    "group": 1,
+                    "slug_type": "complete"
+                }
+            ]
+        }
+    }
+}
