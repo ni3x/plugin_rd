@@ -10,7 +10,7 @@
                 {
                     "plugin": 1.0,
                     "engine": 2.0,
-                    "link": "https://raw.githubusercontent.com/yourusername/yourrepo/main/torrentscsv.unchained"
+                    "link": "https://raw.githubusercontent.com/ni3x/plugin_rd/refs/heads/main/torrentscsv.unchained"
                 }
             ]
         }
